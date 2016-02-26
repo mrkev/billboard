@@ -2,7 +2,7 @@ import billboard
 import json
 from time import sleep
 
-chart = billboard.ChartData('hot-100', date='1983-06-18', fetch=True)
+chart = billboard.ChartData('hot-100', date='1958-08-09', fetch=True)
 while chart.previousDate:
     f = open("dump/" + chart.date + ".json","w")
     f.write(json.dumps(chart, default=lambda o: o.__dict__))
